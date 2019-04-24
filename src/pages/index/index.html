@@ -1,0 +1,18 @@
+<div class = "indexpage">
+  <ul data-bind="foreach: {'data': vmdata, 'as': 'row'}">
+    <li data-bind = "text: row.name, click: $root.clickFn"></li>
+  </ul>
+  <div>城市选择:</div>
+  <div>
+    <select data-bind="options: availableCountries,
+                       optionsText: 'CITY_NAME',
+                       optionsValue: 'CITY_ID',
+                       value: selectedCountry"></select>
+  </div>
+   <div>选择结果: <span data-bind="text: selectedCountry "></span></div>
+  <div>
+    <div style="margin-top: 15px">组件实例</div>
+    <ko-select params = "data: selectDatas, value: selectValue"></ko-select>
+  </div>
+ 
+</div>
